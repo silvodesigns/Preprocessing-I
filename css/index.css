@@ -194,3 +194,8 @@ nav a {
   padding-left: 200px;
   margin: 100px 0;
 }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
