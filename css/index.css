@@ -181,3 +181,16 @@ nav a {
   margin: 10px;
   color: #4d4d4d;
 }
+.intro h1 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+.intro p {
+  font-size: 18px;
+  width: 400px;
+  line-height: 1.4;
+}
+.intro {
+  padding-left: 200px;
+  margin: 100px 0;
+}
