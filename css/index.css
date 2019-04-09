@@ -175,12 +175,15 @@ nav {
   flex-grow: 2;
   display: flex;
   justify-content: flex-end;
+  font-size: 16px;
 }
 nav a {
   text-decoration: none;
-  font-size: 21px;
   margin: 10px;
   color: #4d4d4d;
+}
+nav a:hover {
+  color: black;
 }
 .intro h1 {
   font-size: 36px;
@@ -210,6 +213,9 @@ nav a {
   background-color: #c1272d;
   color: white;
   cursor: pointer;
+}
+.red {
+  background-color: #c1272d;
 }
 .htmll,
 .css,
@@ -309,4 +315,49 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+.experience {
+  margin: 200px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.years div {
+  height: 152px;
+  width: 270px;
+  color: white;
+  font-size: 48px;
+  background-color: black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.years div:hover {
+  background-color: #c1272d;
+  color: white;
+  cursor: pointer;
+}
+.years div.active {
+  background-color: #c1272d;
+  color: white;
+}
+.content {
+  padding-top: 30px;
+}
+.content h1 {
+  font-size: 48px;
+  padding-bottom: 40px;
+}
+.content ul {
+  margin-left: 50px;
+}
+.content ul li {
+  margin: 20px 0;
+}
+.location {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #4d4d4d;
+  margin-right: 40px;
 }
