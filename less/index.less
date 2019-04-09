@@ -31,6 +31,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Raleway', sans-serif;
+
 }
 ol, ul {
 	list-style: none;
@@ -124,7 +126,8 @@ nav a{
 
 .intro{
 	padding-left:200px;
-	margin:100px 0;
+	margin-top:100px;
+	margin-bottom:300px;
 	
 }
 
@@ -137,19 +140,78 @@ nav a{
 
 .skills div{
 	height:153px;
+	text-align:center;
 }
 
-.html{
+.skills div:hover{
+	background-color:#c1272d;
+	color:white;
+	cursor:pointer;
+}
+
+.htmll, .css, .git, .type, .branding, .less{
+
+	color:white;
+	font-size:48px;
+	background-color:black;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.illustrator, .photoshop {
+	font-size:21px;
+	background-color:black;
+	color:white;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+}
+
+.ui, .ux{
+	font-size:48px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+}
+.empty{
 	grid-row-start:    1;
 	grid-row-end:      2;
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end:   4;
-}
+	color:white;
 
-.branding{
+}
+.empty02{
 	grid-row-start:    2;
 	grid-row-end:      3;
 	grid-column-start: 3;
+	grid-column-end:   4;
+	color:white;
+
+}
+.empty03{
+	grid-row-start:    4;
+	grid-row-end:      5;
+	grid-column-start: 1;
+	grid-column-end:   2;
+	color:white;
+
+}
+.empty04{
+	grid-row-start:    5;
+	grid-row-end:      6;
+	grid-column-start: 1;
+	grid-column-end:   2;
+	color:white;
+
+}
+.branding{
+	grid-row-start:    2;
+	grid-row-end:      3;
+	grid-column-start: 4;
 	grid-column-end:   6;
 
 }
@@ -159,14 +221,25 @@ nav a{
 	grid-row-end:      4;
 	grid-column-start: 2;
 	grid-column-end:   6;
+	font-size:48px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+
+
 
 }
 
 .visual{
 	grid-row-start:    4;
 	grid-row-end:      5;
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end:   4;
+	font-size:21px;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+
 
 
 }
@@ -183,8 +256,13 @@ nav a{
 .wire{
 	grid-row-start:    5;
 	grid-row-end:      6;
-	grid-column-start: 1;
+	grid-column-start: 2;
 	grid-column-end:   4;
+	font-size:21px;
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+
 
 
 }
