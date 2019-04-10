@@ -132,10 +132,22 @@ table {
   box-sizing: border-box;
 }
 /* Variables */
-@titles : font-size: 48px;
-@subtitles : font-size: 36px;
-@secondtitles :font-size:21px;
-@text : font-size:18px;
+.bg-red {
+  background-color: #c1272d;
+}
+.bg-black {
+  background-color: #000;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 html,
 body {
   height: 100%;
@@ -151,11 +163,11 @@ body {
   height: 120px;
 }
 .social-contact h4 {
-  font-size: 21px;
+  font-size: 36px;
   color: #4d4d4d;
   margin-right: 50px;
 }
-.icon {
+.social-contact .icon {
   width: 45px;
   height: 45px;
   margin: 10px;
@@ -170,7 +182,7 @@ header h1 {
 header span {
   font-size: 21px;
 }
-.logo {
+header .logo {
   width: 90px;
   height: 122px;
   margin-right: 50px;
@@ -180,7 +192,7 @@ nav {
   flex-grow: 2;
   display: flex;
   justify-content: flex-end;
-  font-size: 16px;
+  font-size: 18px -2;
 }
 nav a {
   text-decoration: none;
@@ -188,7 +200,12 @@ nav a {
   color: #4d4d4d;
 }
 nav a:hover {
-  color: black;
+  color: #000;
+}
+.intro {
+  padding-left: 200px;
+  margin-top: 100px;
+  margin-bottom: 300px;
 }
 .intro h1 {
   font-size: 36px;
@@ -199,11 +216,6 @@ nav a:hover {
   width: 400px;
   line-height: 1.4;
 }
-.intro {
-  padding-left: 200px;
-  margin-top: 100px;
-  margin-bottom: 300px;
-}
 .skills {
   display: grid;
   width: 100%;
@@ -213,14 +225,14 @@ nav a:hover {
 .skills div {
   height: 153px;
   text-align: center;
+  transition-property: background-color;
+  transition-duration: 0.6s;
+  transition-delay: 0.2s;
 }
 .skills div:hover {
   background-color: #c1272d;
-  color: white;
+  color: #fff;
   cursor: pointer;
-}
-.red {
-  background-color: #c1272d;
 }
 .htmll,
 .css,
@@ -228,9 +240,9 @@ nav a:hover {
 .type,
 .branding,
 .less {
-  color: white;
+  color: #fff;
   font-size: 48px;
-  background-color: black;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,8 +250,8 @@ nav a:hover {
 .illustrator,
 .photoshop {
   font-size: 21px;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -256,28 +268,27 @@ nav a:hover {
   grid-row-end: 2;
   grid-column-start: 2;
   grid-column-end: 4;
-  color: white;
+  color: #fff;
 }
 .empty02 {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 4;
-  color: white;
+  color: #fff;
 }
 .empty03 {
   grid-row-start: 4;
   grid-row-end: 5;
   grid-column-start: 1;
   grid-column-end: 2;
-  color: white;
+  color: #fff;
 }
 .empty04 {
   grid-row-start: 5;
   grid-row-end: 6;
   grid-column-start: 1;
   grid-column-end: 2;
-  color: white;
 }
 .branding {
   grid-row-start: 2;
@@ -329,22 +340,21 @@ nav a:hover {
 .years div {
   height: 152px;
   width: 270px;
-  color: white;
+  color: #fff;
   font-size: 48px;
-  background-color: black;
-  text-align: center;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .years div:hover {
   background-color: #c1272d;
-  color: white;
+  color: #fff;
   cursor: pointer;
 }
 .years div.active {
   background-color: #c1272d;
-  color: white;
+  color: #fff;
 }
 .content {
   padding-top: 30px;
@@ -412,11 +422,11 @@ nav a:hover {
   font-size: 48px;
 }
 .form {
-  color: White;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   padding: 50px 0  50px 50px;
 }
-.form input[type=text] {
+input[type=text] {
   width: 25%;
   border: none;
   height: 50px;

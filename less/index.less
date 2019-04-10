@@ -32,8 +32,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Raleway', sans-serif;
-	background-color:blue;
-
 }
 ol, ul {
 	list-style: none;
@@ -66,10 +64,10 @@ table {
 
 
 //typography
-@titles: font-size: 48px;
-@subtitles: font-size: 36px;
-@secondtitles: font-size: 21px;
-@text: font-size:18px;
+@titles: 48px;
+@subtitles: 36px;
+@secondtitles: 21px;
+@text: 18px;
 
 
 //layout patterns
@@ -109,7 +107,7 @@ html, body {
 	height:120px;
 
 	h4{
-		font-size: @secondtitles;
+		font-size: @subtitles;
 		color: @grey;
 		margin-right:50px;
 
@@ -185,11 +183,11 @@ nav{
 		width:400px;
 		line-height:1.4;
 	}
-
+}
  
 
 
-.skills{
+.skills {
 	display:grid;
 	width:100%;
 	grid-template-columns: repeat(5, 1fr);
@@ -198,16 +196,15 @@ nav{
 		div{
 			height:153px;
 			text-align:center;
-			transition-property: height;
-			transition-duration: 4s;
-			transition-delay: 1s;
+			transition-property: background-color;
+  			transition-duration: 0.6s;
+ 			 transition-delay: 0.2s;
 		}
 
 		div:hover{
 			.bg-red();
 			color: @white;
 			cursor:pointer;
-			height:180px;
 		}
 }
 
@@ -455,4 +452,3 @@ input[type=text]{
 
 
 
-}
