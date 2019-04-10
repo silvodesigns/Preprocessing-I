@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Raleway', sans-serif;
+	background-color:blue;
 
 }
 ol, ul {
@@ -67,100 +68,11 @@ table {
 //typography
 @titles: font-size: 48px;
 @subtitles: font-size: 36px;
-@secondtitles:font-size:21px;
+@secondtitles: font-size: 21px;
 @text: font-size:18px;
 
-html, body {
-    height: 100%;
-}
 
-.container{
-	max-width: 980px;
-	margin:0 auto;
-}
-.social-contact{
-	display:flex;
-	align-items:center;
-	justify-content:flex-end;
-	height:120px;
-
-}
-
-.social-contact h4{
-	font-size:@secondtitles;
-	color: @grey;
-	margin-right:50px;
-}
-.icon{
-	width: 45px;
-	height:45px;
-	margin:10px;
-	
-}
-header{
-	display:flex;
-	align-items:center;
-}
-header h1{
-	font-size:@titles;
-}
-header span{
-	font-size:@secondtitles;
-}
-.logo{
-	width:90px;
-	height:122px;
-	margin-right:50px;
-	margin-bottom:90px;
-}
-
-nav{
-	flex-grow:2;
-	display:flex;
-	justify-content:flex-end;
-	font-size: 16px;
-}
-
-nav a{
-	text-decoration:none;
-	margin:10px;
-	color:@grey;
-}
-
-nav a:hover {
-	color:@black;
-}
-
-.intro h1{
-	font-size:@subtitles;
-	padding-bottom:20px;
-
-}
-
-.intro p{
-	font-size:@text;
-	width:400px;
-	line-height:1.4;
-}
-
-.intro{
-	padding-left:200px;
-	margin-top:100px;
-	margin-bottom:300px;
-	
-}
-
-.skills{
-	display:grid;
-	width:100%;
-	grid-template-columns: repeat(5, 1fr);
-	grid-template-rows: repeat(5, 1fr);
-}
-
-.skills div{
-	height:153px;
-	text-align:center;
-}
+//layout patterns
 .bg-red{
 	background-color:@red;
 }
@@ -180,12 +92,126 @@ nav a:hover {
 	justify-content:flex-start;
 }
 
-.skills div:hover{
-	.bg-red();
-	color @white;
-	cursor:pointer;
+
+html, body {
+    height: 100%;
 }
 
+.container{
+	max-width: 980px;
+	margin:0 auto;
+}
+.social-contact{
+
+	display:flex;
+	align-items:center;
+	justify-content:flex-end;
+	height:120px;
+
+	h4{
+		font-size: @secondtitles;
+		color: @grey;
+		margin-right:50px;
+
+	}
+
+	.icon{
+		width: 45px;
+		height:45px;
+		margin:10px;
+		
+	}
+
+}
+
+header{
+	display:flex;
+	align-items:center;
+
+	h1{
+		font-size:@titles;
+	}
+	span{
+		font-size:@secondtitles;
+	}
+
+	.logo{
+		width:90px;
+		height:122px;
+		margin-right:50px;
+		margin-bottom:90px;	
+	}
+}
+
+
+nav{
+	flex-grow:2;
+	display:flex;
+	justify-content:flex-end;
+	font-size:@text -2;
+
+	a{
+
+	text-decoration:none;
+	margin:10px;
+	color:@grey;
+
+	}
+
+	a:hover {
+		color:@black;
+	}
+}
+
+
+
+
+
+.intro {
+
+	padding-left:200px;
+	margin-top:100px;
+	margin-bottom:300px;
+	
+	
+		h1{
+		font-size:@subtitles;
+		padding-bottom:20px;
+
+	}
+
+		p{
+		font-size:@text;
+		width:400px;
+		line-height:1.4;
+	}
+
+ 
+
+
+.skills{
+	display:grid;
+	width:100%;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+
+		div{
+			height:153px;
+			text-align:center;
+			transition-property: height;
+			transition-duration: 4s;
+			transition-delay: 1s;
+		}
+
+		div:hover{
+			.bg-red();
+			color: @white;
+			cursor:pointer;
+			height:180px;
+		}
+}
+
+ 
 
 .htmll, .css, .git, .type, .branding, .less{
 
@@ -201,6 +227,7 @@ nav a:hover {
 	.bg-black();
 	color:@white;
 	.flex-center();
+	
 }
 
 .ui, .ux{
@@ -298,42 +325,50 @@ nav a:hover {
 	justify-content:space-between;
 }
 
-.years div{
-	height:152px;
-	width:270px;
-	color:@white;
-	font-size:@titles;
-	.bg-black();
-	.flex-center();
+.years{
+	
+	div{
+		height:152px;
+		width:270px;
+		color:@white;
+		font-size:@titles;
+		.bg-black();
+		.flex-center();
 
 }
+	div:hover{
+		.bg-red();
+		color:@white;
+		cursor:pointer;
+	}
+	div.active{
+		.bg-red();
+		color:@white;
+	
+	}
+}	
 
-.years div:hover{
-	.bg-red();
-	color:@white;
-	cursor:pointer;
-}
-
-.years div.active{
-	.bg-red();
-	color:@white;
-
-}
 
 .content{
 	padding-top:30px;
-}
-.content h1{
-	font-size:48px;
-	padding-bottom:40px;
 
+	h1{
+		font-size:48px;
+		padding-bottom:40px;
+	
+	}
+
+	ul{
+		margin-left:50px; 
+
+		li{
+			margin:20px 0;
+		}
+	}
 }
-.content ul{
-	margin-left:50px; 
-}
-.content ul li{
-	margin:20px 0;
-}
+ 
+ 
+ 
 
 .location{
 	display:flex;
@@ -353,14 +388,16 @@ nav a:hover {
 	display:flex;
 	flex-wrap:wrap;
 	justify-content:space-between;
+
+	div{
+		width:40%;
+		margin:80px 0;
+		padding-left:20px;
+	}
+	
 }
 
-.schools div{
-	width:40%;
-	margin:80px 0;
-	padding-left:20px;
-}
-
+ 
 .top{
 	padding:100px 0;
 }
@@ -373,13 +410,18 @@ nav a:hover {
 .school{
 	color:@grey;
 }
-.education h1{
-	font-size:@titles;
+	.education {
+		
+		h1{
+			font-size:@titles;
+		}
+
+		h2{
+			font-size:@subtitles;
+		}
 }
 
-.education h2{
-	font-size:@subtitles;
-}
+
 .schools div{
 	border-left:6pt solid black;
 }
@@ -389,16 +431,20 @@ nav a:hover {
 	margin:0 auto;
 	margin-top:300px;
 	margin-bottom:100px;
+
+	h1{
+		font-size:@titles;
+	}
 }
-.contact-header h1{
-	font-size:@titles;
-}
-.form{
+ 
+.form {
+
 	color:@white;
 	.bg-black();
 	padding:50px 0  50px 50px;
+
 }
-.form input[type=text]{
+input[type=text]{
 	width:25%;
 	border:none;
 	height:50px;
@@ -407,3 +453,6 @@ nav a:hover {
 
 }
 
+
+
+}
