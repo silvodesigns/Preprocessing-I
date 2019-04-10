@@ -361,3 +361,37 @@ nav a:hover {
   color: #4d4d4d;
   margin-right: 40px;
 }
+.education {
+  margin: 100px 0;
+}
+.schools {
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.schools div {
+  width: 40%;
+  margin: 80px 0;
+  padding-left: 20px;
+}
+.top {
+  padding: 100px 0;
+}
+.school,
+.campus {
+  margin: 10px 10px 10px 0;
+  display: inline-block;
+}
+.school {
+  color: #4d4d4d;
+}
+.education h1 {
+  font-size: 48px;
+}
+.education h2 {
+  font-size: 36px;
+}
+.schools div {
+  border-left: 6pt solid black;
+}
