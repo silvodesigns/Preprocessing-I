@@ -55,6 +55,21 @@ table {
     box-sizing: border-box;
 }
 
+/* Variables */
+
+//colors
+@red: #c1272d;
+@grey: #4d4d4d;
+@black: #000;
+@white: #fff;
+
+
+//typography
+@titles: font-size: 48px;
+@subtitles: font-size: 36px;
+@secondtitles:font-size:21px;
+@text: font-size:18px;
+
 html, body {
     height: 100%;
 }
@@ -72,8 +87,8 @@ html, body {
 }
 
 .social-contact h4{
-	font-size: 21px;
-	color: #4d4d4d;
+	font-size:@secondtitles;
+	color: @grey;
 	margin-right:50px;
 }
 .icon{
@@ -87,10 +102,10 @@ header{
 	align-items:center;
 }
 header h1{
-	font-size:48px;
+	font-size:@titles;
 }
 header span{
-	font-size:21px;
+	font-size:@secondtitles;
 }
 .logo{
 	width:90px;
@@ -109,21 +124,21 @@ nav{
 nav a{
 	text-decoration:none;
 	margin:10px;
-	color:#4d4d4d;
+	color:@grey;
 }
 
 nav a:hover {
-	color:black;
+	color:@black;
 }
 
 .intro h1{
-	font-size:36px;
+	font-size:@subtitles;
 	padding-bottom:20px;
 
 }
 
 .intro p{
-	font-size:18px;
+	font-size:@text;
 	width:400px;
 	line-height:1.4;
 }
@@ -146,41 +161,51 @@ nav a:hover {
 	height:153px;
 	text-align:center;
 }
-
-.skills div:hover{
-	background-color:#c1272d;
-	color:white;
-	cursor:pointer;
+.bg-red{
+	background-color:@red;
 }
-.red{
-	background-color:#c1272d;
+.bg-black{
+	background-color:@black;
 }
+.flex-center{
 
-.htmll, .css, .git, .type, .branding, .less{
-
-	color:white;
-	font-size:48px;
-	background-color:black;
 	display:flex;
 	align-items:center;
 	justify-content:center;
+}
+
+.flex-start{
+	display:flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+
+.skills div:hover{
+	.bg-red();
+	color @white;
+	cursor:pointer;
+}
+
+
+.htmll, .css, .git, .type, .branding, .less{
+
+	color:@white;
+	font-size:48px;
+	.bg-black();
+	.flex-center();
+	
 }
 
 .illustrator, .photoshop {
 	font-size:21px;
-	background-color:black;
-	color:white;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-
+	.bg-black();
+	color:@white;
+	.flex-center();
 }
 
 .ui, .ux{
-	font-size:48px;
-	display:flex;
-	align-items:center;
-	justify-content:center;
+	font-size:@titles;
+	.flex-center();
 
 }
 .empty{
@@ -188,7 +213,7 @@ nav a:hover {
 	grid-row-end:      2;
 	grid-column-start: 2;
 	grid-column-end:   4;
-	color:white;
+	color:@white;
 
 }
 .empty02{
@@ -196,7 +221,7 @@ nav a:hover {
 	grid-row-end:      3;
 	grid-column-start: 3;
 	grid-column-end:   4;
-	color:white;
+	color:@white;
 
 }
 .empty03{
@@ -204,7 +229,7 @@ nav a:hover {
 	grid-row-end:      5;
 	grid-column-start: 1;
 	grid-column-end:   2;
-	color:white;
+	color:@white;
 
 }
 .empty04{
@@ -212,7 +237,7 @@ nav a:hover {
 	grid-row-end:      6;
 	grid-column-start: 1;
 	grid-column-end:   2;
-	color:white;
+	
 
 }
 .branding{
@@ -228,10 +253,8 @@ nav a:hover {
 	grid-row-end:      4;
 	grid-column-start: 2;
 	grid-column-end:   6;
-	font-size:48px;
-	display:flex;
-	align-items:center;
-	justify-content:center;
+	font-size:@titles;
+	.flex-center();
 
 
 
@@ -242,10 +265,8 @@ nav a:hover {
 	grid-row-end:      5;
 	grid-column-start: 2;
 	grid-column-end:   4;
-	font-size:21px;
-	display:flex;
-	align-items:center;
-	justify-content:flex-start;
+	font-size:@secondtitles;
+	.flex-start();
 
 
 
@@ -265,10 +286,8 @@ nav a:hover {
 	grid-row-end:      6;
 	grid-column-start: 2;
 	grid-column-end:   4;
-	font-size:21px;
-	display:flex;
-	align-items:center;
-	justify-content:flex-start;
+	font-size:@secondtitles;
+	.flex-start();
 
 
 }
@@ -282,26 +301,22 @@ nav a:hover {
 .years div{
 	height:152px;
 	width:270px;
-	color:white;
-	font-size:48px;
-	background-color:black;
-	text-align:center;
-	display:flex;
-	align-items:center;
-	justify-content:center;
-
+	color:@white;
+	font-size:@titles;
+	.bg-black();
+	.flex-center();
 
 }
 
 .years div:hover{
-	background-color:#c1272d;
-	color:white;
+	.bg-red();
+	color:@white;
 	cursor:pointer;
 }
 
 .years div.active{
-	background-color:#c1272d;
-	color:white;
+	.bg-red();
+	color:@white;
 
 }
 
@@ -324,7 +339,7 @@ nav a:hover {
 	display:flex;
 	justify-content:flex-end;
 	align-items:flex-end;
-	color:#4d4d4d;
+	color:@grey;
 	margin-right:40px;
 }
 
@@ -356,14 +371,14 @@ nav a:hover {
 }
 
 .school{
-	color:#4d4d4d;
+	color:@grey;
 }
 .education h1{
-	font-size:48px;
+	font-size:@titles;
 }
 
 .education h2{
-	font-size:36px;
+	font-size:@subtitles;
 }
 .schools div{
 	border-left:6pt solid black;
@@ -376,11 +391,11 @@ nav a:hover {
 	margin-bottom:100px;
 }
 .contact-header h1{
-	font-size:48px;
+	font-size:@titles;
 }
 .form{
-	color:White;
-	background-color:black;
+	color:@white;
+	.bg-black();
 	padding:50px 0  50px 50px;
 }
 .form input[type=text]{
@@ -391,3 +406,4 @@ nav a:hover {
 	margin:25px 0;
 
 }
+

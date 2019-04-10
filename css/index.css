@@ -131,6 +131,11 @@ table {
 * {
   box-sizing: border-box;
 }
+/* Variables */
+@titles : font-size: 48px;
+@subtitles : font-size: 36px;
+@secondtitles :font-size:21px;
+@text : font-size:18px;
 html,
 body {
   height: 100%;
