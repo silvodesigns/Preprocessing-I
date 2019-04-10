@@ -107,6 +107,7 @@ section {
 body {
   line-height: 1;
   font-family: 'Raleway', sans-serif;
+  font-size: 10px;
 }
 ol,
 ul {
@@ -163,7 +164,7 @@ body {
   height: 120px;
 }
 .social-contact h4 {
-  font-size: 36px;
+  font-size: 3.6em;
   color: #4d4d4d;
   margin-right: 50px;
 }
@@ -176,11 +177,17 @@ header {
   display: flex;
   align-items: center;
 }
+@media (max-width: 860px) {
+  header {
+    flex-direction: column;
+    padding-top: 120px;
+  }
+}
 header h1 {
-  font-size: 48px;
+  font-size: 4.8em;
 }
 header span {
-  font-size: 21px;
+  font-size: 2.1em;
 }
 header .logo {
   width: 90px;
@@ -188,18 +195,37 @@ header .logo {
   margin-right: 50px;
   margin-bottom: 90px;
 }
-nav {
+@media (max-width: 860px) {
+  header .logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+header nav {
   flex-grow: 2;
   display: flex;
   justify-content: flex-end;
-  font-size: 18px -2;
+  font-size: 1.8em -2;
 }
-nav a {
+@media (max-width: 860px) {
+  header nav {
+    padding: 100px 0;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    display: none;
+  }
+}
+header nav a {
   text-decoration: none;
-  margin: 10px;
+  margin: 1%;
   color: #4d4d4d;
+  font-size: 1.8em;
 }
-nav a:hover {
+header nav a:hover {
   color: #000;
 }
 .intro {
@@ -207,12 +233,20 @@ nav a:hover {
   margin-top: 100px;
   margin-bottom: 300px;
 }
+@media (max-width: 860px) {
+  .intro {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 .intro h1 {
-  font-size: 36px;
+  font-size: 3.6em;
   padding-bottom: 20px;
 }
 .intro p {
-  font-size: 18px;
+  font-size: 1.8em;
   width: 400px;
   line-height: 1.4;
 }
@@ -241,15 +275,25 @@ nav a:hover {
 .branding,
 .less {
   color: #fff;
-  font-size: 48px;
+  font-size: 4.8em;
   background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 860px) {
+  .htmll,
+  .css,
+  .git,
+  .type,
+  .branding,
+  .less {
+    font-size: 2.1em;
+  }
+}
 .illustrator,
 .photoshop {
-  font-size: 21px;
+  font-size: 1.8em;
   background-color: #000;
   color: #fff;
   display: flex;
@@ -258,7 +302,7 @@ nav a:hover {
 }
 .ui,
 .ux {
-  font-size: 48px;
+  font-size: 4.8em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,7 +345,7 @@ nav a:hover {
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 6;
-  font-size: 48px;
+  font-size: 4.8em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,7 +355,7 @@ nav a:hover {
   grid-row-end: 5;
   grid-column-start: 2;
   grid-column-end: 4;
-  font-size: 21px;
+  font-size: 2.1em;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -327,7 +371,7 @@ nav a:hover {
   grid-row-end: 6;
   grid-column-start: 2;
   grid-column-end: 4;
-  font-size: 21px;
+  font-size: 2.1em;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -337,15 +381,32 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 860px) {
+  .experience {
+    flex-direction: column;
+  }
+}
+@media (max-width: 860px) {
+  .years {
+    display: flex;
+  }
+}
 .years div {
   height: 152px;
   width: 270px;
   color: #fff;
-  font-size: 48px;
+  font-size: 4.8em;
   background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 860px) {
+  .years div {
+    width: 135px;
+    height: 75px;
+    font-size: 3.6em;
+  }
 }
 .years div:hover {
   background-color: #c1272d;
@@ -387,10 +448,21 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 860px) {
+  .schools {
+    flex-direction: column;
+  }
+}
 .schools div {
   width: 40%;
   margin: 80px 0;
   padding-left: 20px;
+}
+@media (max-width: 860px) {
+  .schools div {
+    width: 80%;
+    margin: 40px;
+  }
 }
 .top {
   padding: 100px 0;
@@ -404,10 +476,10 @@ nav a:hover {
   color: #4d4d4d;
 }
 .education h1 {
-  font-size: 48px;
+  font-size: 4.8em;
 }
 .education h2 {
-  font-size: 36px;
+  font-size: 3.6em;
 }
 .schools div {
   border-left: 6pt solid black;
@@ -419,7 +491,7 @@ nav a:hover {
   margin-bottom: 100px;
 }
 .contact-header h1 {
-  font-size: 48px;
+  font-size: 4.8em;
 }
 .form {
   color: #fff;
@@ -432,4 +504,12 @@ input[type=text] {
   height: 50px;
   padding: 25px;
   margin: 25px 0;
+}
+@media (max-width: 500px) {
+  .experience,
+  .education,
+  .contact,
+  .skills {
+    display: none;
+  }
 }

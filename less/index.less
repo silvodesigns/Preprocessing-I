@@ -32,6 +32,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Raleway', sans-serif;
+	font-size:10px;
 }
 ol, ul {
 	list-style: none;
@@ -64,10 +65,10 @@ table {
 
 
 //typography
-@titles: 48px;
-@subtitles: 36px;
-@secondtitles: 21px;
-@text: 18px;
+@titles: 4.8em;
+@subtitles: 3.6em;
+@secondtitles: 2.1em;
+@text: 1.8em;
 
 
 //layout patterns
@@ -126,6 +127,12 @@ header{
 	display:flex;
 	align-items:center;
 
+	@media (max-width: 860px) {
+		flex-direction:column;
+		padding-top:120px;
+
+    }
+
 	h1{
 		font-size:@titles;
 	}
@@ -138,27 +145,47 @@ header{
 		height:122px;
 		margin-right:50px;
 		margin-bottom:90px;	
+		@media (max-width: 860px) {
+			margin-right:0;
+			margin-bottom:20px;
+	
+		}
 	}
-}
+	nav{
+		flex-grow:2;
+		display:flex;
+		justify-content:flex-end;
+		font-size:@text -2;
 
+		@media (max-width: 860px) {
+			padding:100px 0;
+			justify-content:space-evenly;
+			width:100%;
+	
+		}
 
-nav{
-	flex-grow:2;
-	display:flex;
-	justify-content:flex-end;
-	font-size:@text -2;
-
-	a{
-
-	text-decoration:none;
-	margin:10px;
-	color:@grey;
-
+		@media (max-width: 500px) {
+			display:none;
+	
+		}
+	
+		a{
+	
+		text-decoration:none;
+		margin:1%;
+		color:@grey;
+		font-size:@text;
+	
+		}
+	
+		a:hover {
+			color:@black;
+		}
+	
 	}
 
-	a:hover {
-		color:@black;
-	}
+
+
 }
 
 
@@ -170,6 +197,12 @@ nav{
 	padding-left:200px;
 	margin-top:100px;
 	margin-bottom:300px;
+
+	@media (max-width: 860px) {
+		padding-left:0;
+		.flex-center();
+
+    }
 	
 	
 		h1{
@@ -213,14 +246,19 @@ nav{
 .htmll, .css, .git, .type, .branding, .less{
 
 	color:@white;
-	font-size:48px;
+	font-size:@titles;
 	.bg-black();
 	.flex-center();
+
+	@media (max-width: 860px) {
+		font-size:@secondtitles;
+
+    }
 	
 }
 
 .illustrator, .photoshop {
-	font-size:21px;
+	font-size:@text;
 	.bg-black();
 	color:@white;
 	.flex-center();
@@ -320,9 +358,18 @@ nav{
 	margin:200px 0;
 	display:flex;
 	justify-content:space-between;
+
+		@media (max-width: 860px) {
+			flex-direction:column;
+
+		}
 }
 
 .years{
+
+	@media (max-width: 860px) {
+		display:flex;
+    }
 	
 	div{
 		height:152px;
@@ -331,6 +378,13 @@ nav{
 		font-size:@titles;
 		.bg-black();
 		.flex-center();
+
+		@media (max-width: 860px) {
+			width:135px;
+			height:75px;
+			font-size:@subtitles;
+	
+		}
 
 }
 	div:hover{
@@ -386,10 +440,21 @@ nav{
 	flex-wrap:wrap;
 	justify-content:space-between;
 
+	@media (max-width: 860px) {
+		flex-direction:column;
+
+    }
+
 	div{
 		width:40%;
 		margin:80px 0;
 		padding-left:20px;
+
+		@media (max-width: 860px) {
+			width:80%;
+			margin:40px;
+	
+		}
 	}
 	
 }
@@ -448,6 +513,13 @@ input[type=text]{
 	padding:25px;
 	margin:25px 0;
 
+}
+
+.experience, .education, .contact, .skills {
+	@media (max-width: 500px) {
+		display:none;
+
+    }
 }
 
 
