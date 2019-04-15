@@ -1,1 +1,515 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+/* Variables */
+.bg-red {
+  background-color: #c1272d;
+}
+.bg-black {
+  background-color: #000;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.social-contact {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 120px;
+}
+.social-contact h4 {
+  font-size: 3.6em;
+  color: #4d4d4d;
+  margin-right: 50px;
+}
+.social-contact .icon {
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  header {
+    flex-direction: column;
+    padding-top: 120px;
+  }
+}
+header h1 {
+  font-size: 4.8em;
+}
+header span {
+  font-size: 2.1em;
+}
+header .logo {
+  width: 90px;
+  height: 122px;
+  margin-right: 50px;
+  margin-bottom: 90px;
+}
+@media (max-width: 860px) {
+  header .logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+header nav {
+  flex-grow: 2;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.8em -2;
+}
+@media (max-width: 860px) {
+  header nav {
+    padding: 100px 0;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header nav {
+    display: none;
+  }
+}
+header nav a {
+  text-decoration: none;
+  margin: 1%;
+  color: #4d4d4d;
+  font-size: 1.8em;
+}
+header nav a:hover {
+  color: #000;
+}
+.intro {
+  padding-left: 200px;
+  margin-top: 100px;
+  margin-bottom: 300px;
+}
+@media (max-width: 860px) {
+  .intro {
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.intro h1 {
+  font-size: 3.6em;
+  padding-bottom: 20px;
+}
+.intro p {
+  font-size: 1.8em;
+  width: 400px;
+  line-height: 1.4;
+}
+.skills {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.skills div {
+  height: 153px;
+  text-align: center;
+  transition-property: background-color;
+  transition-duration: 0.6s;
+  transition-delay: 0.2s;
+}
+.skills div:hover {
+  background-color: #c1272d;
+  color: #fff;
+  cursor: pointer;
+}
+.htmll,
+.css,
+.git,
+.type,
+.branding,
+.less {
+  color: #fff;
+  font-size: 4.8em;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 860px) {
+  .htmll,
+  .css,
+  .git,
+  .type,
+  .branding,
+  .less {
+    font-size: 2.1em;
+  }
+}
+.illustrator,
+.photoshop {
+  font-size: 1.8em;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ui,
+.ux {
+  font-size: 4.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.empty {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  color: #fff;
+}
+.empty02 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  color: #fff;
+}
+.empty03 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  color: #fff;
+}
+.empty04 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.branding {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+.responsive {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  font-size: 4.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.visual {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  font-size: 2.1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.type {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+.wire {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  font-size: 2.1em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.experience {
+  margin: 200px 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 860px) {
+  .experience {
+    flex-direction: column;
+  }
+}
+@media (max-width: 860px) {
+  .years {
+    display: flex;
+  }
+}
+.years div {
+  height: 152px;
+  width: 270px;
+  color: #fff;
+  font-size: 4.8em;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 860px) {
+  .years div {
+    width: 135px;
+    height: 75px;
+    font-size: 3.6em;
+  }
+}
+.years div:hover {
+  background-color: #c1272d;
+  color: #fff;
+  cursor: pointer;
+}
+.years div.active {
+  background-color: #c1272d;
+  color: #fff;
+}
+.content {
+  padding-top: 30px;
+}
+.content h1 {
+  font-size: 48px;
+  padding-bottom: 40px;
+}
+.content ul {
+  margin-left: 50px;
+}
+.content ul li {
+  margin: 20px 0;
+}
+.location {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #4d4d4d;
+  margin-right: 40px;
+}
+.education {
+  margin: 100px 0;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.schools {
+  padding: 0 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 860px) {
+  .schools {
+    flex-direction: column;
+  }
+}
+.schools div {
+  width: 40%;
+  margin: 80px 0;
+  padding-left: 20px;
+}
+@media (max-width: 860px) {
+  .schools div {
+    width: 80%;
+    margin: 40px;
+  }
+}
+.top {
+  padding: 100px 0;
+}
+.school,
+.campus {
+  margin: 10px 10px 10px 0;
+  display: inline-block;
+}
+.school {
+  color: #4d4d4d;
+}
+.education h1 {
+  font-size: 4.8em;
+}
+.education h2 {
+  font-size: 3.6em;
+}
+.schools div {
+  border-left: 6pt solid black;
+}
+.contact-header {
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 300px;
+  margin-bottom: 100px;
+}
+.contact-header h1 {
+  font-size: 4.8em;
+}
+.form {
+  color: #fff;
+  background-color: #000;
+  padding: 50px 0  50px 50px;
+}
+input[type=text] {
+  width: 25%;
+  border: none;
+  height: 50px;
+  padding: 25px;
+  margin: 25px 0;
+}
+@media (max-width: 500px) {
+  .experience,
+  .education,
+  .contact,
+  .skills {
+    display: none;
+  }
+}
